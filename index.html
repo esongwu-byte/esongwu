@@ -1,10 +1,246 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-    <title>我的第一个GitHub Pages网站</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人博客</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+            margin-top: 2.5vh;
+            padding: 0 5vw;
+        }
+
+        .left-column {
+            width: 15%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px; /* 模块间的间距 */
+        }
+
+        .right-column {
+            width: 85%;
+            padding-left: 20px;
+        }
+
+        /* 模块1 - 个人博客标题 */
+        .blog-title-module {
+            background-color: white;
+            border-left: 3px solid #E1BE97; /* 金色边框 */
+            border-right: 3px solid #F9F4E9; /* 淡黄色边框 */
+            padding: 20px;
+            text-align: center;
+        }
+
+        .blog-title-module h1 {
+            font-size: 2vh;
+            color: #664401; /* 深棕色 */
+            padding-left: 20%;
+            padding-top: 15%;
+            margin: 0;
+        }
+
+        /* 模块2 - 导航栏 */
+        .nav-module {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 添加轻微阴影 */
+        }
+
+        .nav-module ul {
+            list-style-type: none;
+        }
+
+        .nav-module li {
+            margin-bottom: 15px;
+        }
+
+        .nav-module a {
+            text-decoration: none;
+            color: #666; /* 深灰色 */
+            font-size: 1.8vh;
+            display: block;
+            padding: 8px 0;
+            transition: color 0.3s ease, font-weight 0.3s ease;
+        }
+
+        .nav-module a:hover {
+            color: #664401; /* 深棕色 */
+            font-weight: bold;
+        }
+
+        /* 模块3 - 我的笔记 */
+        .notes-module {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .notes-module h2 {
+            font-size: 2.5vh;
+            color: black;
+            margin-bottom: 20px;
+        }
+
+        .notes-container {
+            display: flex;
+            gap: 40px; /* 笔记卡片间的间距 */
+        }
+
+        .note-card {
+            background-color: #F9F4E9; /* 淡黄色背景 */
+            border-radius: 8px; /* 圆角 */
+            padding: 15px;
+            width: calc(33.333% - 40px); /* 假设每行3个，减去gap影响 */
+            transition: border 0.3s ease;
+        }
+
+        .note-card:hover {
+            border: 1px solid #E1BE97; /* 金色边框 */
+        }
+
+        .note-card p:nth-child(1) { /* 标题 */
+            font-size: 1.5vh;
+            color: black;
+            margin-bottom: 5px;
+        }
+
+        .note-card p:nth-child(2) { /* 日期 */
+            font-size: 1vh;
+            color: gray;
+        }
+
+        /* 模块4 - 最近的博客 */
+        .blogs-module {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .blogs-module h2 {
+            font-size: 2.5vh;
+            color: black;
+            margin-bottom: 20px;
+        }
+
+        .blog-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px; /* 博客项间的间距 */
+        }
+
+        .blog-image {
+            width: 500px;
+            height: 120px;
+            object-fit: cover;
+            margin-right: 20px;
+            flex-shrink: 0; /* 图片不压缩 */
+        }
+
+        .blog-content h3 {
+            font-size: 2.5vh;
+            color: black;
+            margin-bottom: 10px;
+        }
+
+        .blog-content p {
+            font-size: 1.5vh;
+            color: #555;
+            line-height: 1.6;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, GitHub Pages!</h1>
-    <p>恭喜你，网站已成功部署！</p>
+
+<div class="container">
+    <!-- 左侧列 -->
+    <div class="left-column">
+        <!-- 模块1 - 个人博客标题 -->
+        <div class="blog-title-module">
+            <h1>个人博客</h1>
+        </div>
+
+        <!-- 模块2 - 导航栏 -->
+        <div class="nav-module">
+            <ul>
+                <li><a href="#">主页</a></li>
+                <li><a href="#">关于我</a></li>
+                <li><a href="#">博客</a></li>
+                <li><a href="#">笔记</a></li>
+                <li><a href="#">知识库</a></li>
+                <li><a href="#">智能体</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 右侧列 -->
+    <div class="right-column">
+        <!-- 模块3 - 我的笔记 -->
+        <div class="notes-module">
+            <h2>我的笔记</h2>
+            <div class="notes-container">
+                <div class="note-card">
+                    <p>生活中的无形画布</p>
+                    <p>2024.10.5</p>
+                </div>
+                <div class="note-card">
+                    <p>塑造AI的魔法</p>
+                    <p>2024.10.10</p>
+                </div>
+                <div class="note-card">
+                    <p>园艺中生命哲学的呼吸感</p>
+                    <p>2024.10.15</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 模块4 - 最近的博客 -->
+        <div class="blogs-module">
+            <h2>最近博客</h2>
+            
+            <div class="blog-item">
+                <img src="https://img.alicdn.com/imgextra/i2/O1CN01VjWLAB21Zb4eAatD8_!!6000000006999-2-tps-928-1232.png" alt="活力的源泉：健康生活的艺术与科学" class="blog-image">
+                <div class="blog-content">
+                    <h3>活力的源泉：健康生活的艺术与科学</h3>
+                    <p>健康生活不仅仅是关于身体的活力，它是一种全面的生活方式，涉及到身体、心灵和精神的和谐统一。在这个快节奏的世界中，我们如何找到保持活力的秘诀？首先，我们需要理解健康生活的艺术——这包括了营养均衡的饮食、规律的运动...</p>
+                </div>
+            </div>
+
+            <div class="blog-item">
+                <img src="https://img.alicdn.com/imgextra/i1/O1CN01n5bYVC1LISOAf9gSM_!!6000000001276-2-tps-1232-928.png" alt="在风景与人群中寻找内心的宁静角落" class="blog-image">
+                <div class="blog-content">
+                    <h3>在风景与人群中寻找内心的宁静角落</h3>
+                    <p>在喧嚣的城市中，我们常常感到内心的喧哗和不安。然而，即使在最繁忙的街道和最拥挤的人群中，我们也能找到一片属于自己的宁静角落。这需要我们获得一种内在的力量，这是一种能够在外部世界的纷扰中保持内心平静的能力...</p>
+                </div>
+            </div>
+
+            <div class="blog-item">
+                <img src="https://img.alicdn.com/imgextra/i2/O1CN01Fi9JNQ1e59aJxBRji_!!6000000003819-2-tps-1232-928.png" alt="记录艺术中时间与记忆的交汇" class="blog-image">
+                <div class="blog-content">
+                    <h3>记录艺术中时间与记忆的交汇</h3>
+                    <p>艺术是时间的容器，它捕捉并保存了特定时刻的情感和体验。每一件艺术作品都是艺术家与时间对话的结果，是过去、现在和未来交汇的点。在艺术中记录时间与记忆的交汇，是一种深刻的文化实践，它让我们得以窥见历史的深度和人性的复杂性...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
+
+
+
